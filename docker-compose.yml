@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  go-app: 
+    container_name: go-app
+    build: .
+    environment:
+      DATABASE_URL: "sqlite3:/app/data.db"
+    ports:
+      - "8000:8000"
